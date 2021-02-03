@@ -87,7 +87,7 @@ class FortranFile(FileIO):
      def readInts(self):
          """Read in an array of integers with error checking.
 
-         Returns
+         Returns:
             list of integers read."""
          l = struct.unpack('i',self.read(4))[0]
          data_str = self.read(l)
@@ -103,7 +103,7 @@ class FortranFile(FileIO):
      def readRecord(self):
          """Read a single fortran record.
 
-         Returns
+         Returns:
             Data record read."""
          l = struct.unpack(self.ENDIAN+'i',self.read(4))[0]
          data_str = self.read(l)
