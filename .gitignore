@@ -1,0 +1,10 @@
+*.pyc
+*~
+*.swp
+__pycache__
+FartranBinary.egg-info/
+_build
+_static
+_templates
+build
+dist

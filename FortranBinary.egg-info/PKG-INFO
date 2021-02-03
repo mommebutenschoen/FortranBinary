@@ -1,0 +1,38 @@
+Metadata-Version: 1.1
+Name: FortranBinary
+Version: 17.11
+Summary: Package for handling of FORTRAN binary data with python.
+Home-page: https://gitlab.com/momme/FortranBinary
+Author: Momme Butenschön
+Author-email: mommebu@yahoo.de
+License: GPL
+Description: ====================
+        FortranBinary README
+        ====================
+        
+        Package for handling of FORTRAN binary data with python.
+        
+        Installation:
+        -------------
+        
+        After downloading the source from the repository install via pip, descend
+        into the top-level of the source tree
+        and launch::
+        
+          pip3 install .
+        
+        or to install in developers mode::
+        
+          pip3 install -e .
+        
+Keywords: fortran,binary
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: GPL
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
