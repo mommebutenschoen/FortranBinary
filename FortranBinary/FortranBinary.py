@@ -42,10 +42,13 @@ class FortranFile(FileIO):
          self.write(struct.pack(self.ENDIAN+'i',len(s)))
 
      def readReals(self, prec='d'):
-         """Read in an array of reals (given precision) with error checking.
+         """Read in an array of FORTRAN reals (given precision) with error checking.
 
          Args:
-           prec(string): float precision (d: double, f: sinlge) of data. Defautls to "d".
+            prec(string): float precision (d: double, f: sinlge) of data. Defautls to "d".
+
+         Returns:
+            list of floats read.
          """
 
          if prec not in ['d','f']:
@@ -67,7 +70,7 @@ class FortranFile(FileIO):
            return list(reals)
 
      def writeReals(self, reals, prec='d'):
-         """Write an array of floats in given precision.
+         """Write an array of FORTRAN reals in given precision.
 
          Args:
            reals(float array) : Data to write.
@@ -82,7 +85,10 @@ class FortranFile(FileIO):
          self.write(struct.pack(self.ENDIAN+'i',num*struct.calcsize(prec)))
 
      def readInts(self):
-         """Read in an array of integers with error checking"""
+         """Read in an array of integers with error checking.
+
+         Returns
+            list of integers read."""
          l = struct.unpack('i',self.read(4))[0]
          data_str = self.read(l)
          len_int = struct.calcsize('i')
@@ -95,7 +101,10 @@ class FortranFile(FileIO):
          return list(ints)
 
      def readRecord(self):
-         """Read a single fortran record"""
+         """Read a single fortran record.
+
+         Returns
+            Data record read."""
          l = struct.unpack(self.ENDIAN+'i',self.read(4))[0]
          data_str = self.read(l)
          # check length
@@ -109,6 +118,14 @@ class FortranFile(FileIO):
          return data_str
 
      def readDirectAccessReals(self,prec='d'):
+         """Read FORTRAN Reals from a direct access file.
+
+         Args:
+            prec(string): String identifying the precision used in input files
+
+         Returns:
+            Reals read from direct access file.
+         """
          len_real=struct.calcsize("d")
          filesize=self.seek(0,2) #position at EoF
          self.seek(0,0) #rewind
