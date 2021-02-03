@@ -2,7 +2,7 @@
 *~
 *.swp
 __pycache__
-FartranBinary.egg-info/
+FortranBinary.egg-info/
 _build
 _static
 _templates

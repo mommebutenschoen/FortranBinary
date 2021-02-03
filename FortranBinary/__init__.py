@@ -1,5 +1,5 @@
 """
-numpyXtns package initialisation.
+FortranBinary package initialisation.
 """
 
 from .FortranBinary import *
