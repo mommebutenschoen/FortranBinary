@@ -29,7 +29,7 @@ setup(
     long_description=long_description,
 
     # The project's main homepage.
-    url='https://gitlab.com/momme/FortranBinary',
+    url='https://github.com/mommebutenschoen/FortranBinary.git',
 
     # Author details
     author='Momme Butenschön',
